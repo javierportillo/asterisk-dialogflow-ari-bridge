@@ -5,8 +5,9 @@ COPY package.json /app/
 COPY yarn.lock /app/
 RUN npm install --production
 COPY . /app
-
-FROM gcr.io/distroless/nodejs
-COPY --from=build-env /app /app
-WORKDIR /app
 CMD ["index.js"]
+
+# FROM gcr.io/distroless/nodejs
+# COPY --from=build-env /app /app
+# WORKDIR /app
+# CMD ["index.js"]
