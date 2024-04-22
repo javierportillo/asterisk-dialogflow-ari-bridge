@@ -1,12 +1,12 @@
 module.exports = {
     ari: {
-        url: 'http://asterisk-fqdn:8088',
-        username: 'username',
-        password: 'foo',
+        url: 'http://tele:8088',
+        username: 'rtpaudioserver',
+        password: 'asterisk',
         appName: 'dialogflow'
     },
     rtpServer: {
-        host: 'rtp-audioserver-ip',
+        host: 'rtp',
         port: '7777',
         format: 'slin16'
     },
@@ -16,7 +16,7 @@ module.exports = {
         // playback: 'silence/1'
     },
     mqtt: {
-        url: 'mqtt://test.mosquitto.org',
+        url: 'mqtt://mqtt',
         topicPrefix: 'dialogflow-asterisk'
     }
 }
