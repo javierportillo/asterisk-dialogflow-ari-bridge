@@ -83,11 +83,11 @@ async function main() {
                 });
 
                 bridge.on('dialogFlowEvent', async (data) => {
-                    if (data.intent && data.intent.parameters.fields.foo && data.intent.parameters.fields.foo.stringValue) {
+                    if (data.intent?.parameters?.fields?.foo?.stringValue) {
                         await client.channels.setChannelVar({ channelId: channel.id, variable: 'foo', value: data.intent.parameters.fields.foo.stringValue })
                     }
 
-                    if (data.intent && data.intent.intent && data.intent.intent.endInteraction) {
+                    if (data.intent?.intent?.endInteraction) {
                         await client.channels.continueInDialplan({ channelId: channel.id });
                     }
                 });
