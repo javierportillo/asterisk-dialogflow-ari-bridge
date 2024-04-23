@@ -761,10 +761,10 @@ performance-now@^2.1.0:
   resolved "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns= sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==
 
-pino-pretty@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.npmjs.org/pino-pretty/-/pino-pretty-3.4.0.tgz"
-  integrity sha512-0oEHicFdUCh2tFHQnTX7b9jph+S/UibLMuhBF0yFkt+7JGZGQejNkui27B9qPUofwmqKAf3FfLYvponPyNsQJw==
+pino-pretty@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.npmjs.org/pino-pretty/-/pino-pretty-3.6.1.tgz"
+  integrity sha512-S3bal+Yd313OEaPijbf7V+jPxVaTaRO5RQX8S/Mwdtb/8+JOgo1KolDeJTfMDTU2/k6+MHvEbxv+T1ZRfGlnjA==
   dependencies:
     "@hapi/bourne" "^1.3.2"
     args "^5.0.1"
