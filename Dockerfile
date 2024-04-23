@@ -1,13 +1,8 @@
-FROM node:10.16.3 AS build-env
+FROM node:21-alpine
 
 WORKDIR /app
 COPY package.json /app/
 COPY yarn.lock /app/
-RUN npm install --production
+RUN npm install
 COPY . /app
 CMD ["index.js"]
-
-# FROM gcr.io/distroless/nodejs
-# COPY --from=build-env /app /app
-# WORKDIR /app
-# CMD ["index.js"]
