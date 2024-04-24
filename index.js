@@ -90,6 +90,10 @@ async function main() {
                     if (data.intent?.intent?.endInteraction) {
                         await client.channels.continueInDialplan({ channelId: channel.id });
                     }
+
+                    if (data.intent?.displayName === 'GOTOSUPPORT' || data.intent?.displayName === 'GOTOSALES') {
+                        log.info('GOTTA GO TO', data.intent.displayName)
+                    }
                 });
 
                 await mqttClient.subscribe(`${config.get('mqtt.topicPrefix')}/${channel.id}/events`);
