@@ -18,6 +18,7 @@
     "pino": "^5.14.0"
   },
   "devDependencies": {
+    "@types/ari-client": "^2.2.12",
     "pino-pretty": "^3.6.1",
     "prettier": "^3.2.5"
   },

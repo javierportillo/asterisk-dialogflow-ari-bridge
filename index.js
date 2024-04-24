@@ -100,8 +100,18 @@ async function main() {
           //   await client.channels.continueInDialplan({ channelId: channel.id })
           // }
 
-          if (data.endTransmission && (data.queryResult?.intent?.displayName === 'GOTOSUPPORT' || data.queryResult?.intent?.displayName === 'GOTOSALES')) {
+          if (
+            data.endTransmission &&
+            (data.queryResult?.intent?.displayName === 'GOTOSUPPORT' ||
+              data.queryResult?.intent?.displayName === 'GOTOSALES')
+          ) {
             log.info('GOTTA GO TO', data.queryResult.intent.displayName)
+            await client.channels.setChannelVar({
+              channelId: channel.id,
+              variable: 'INTENTCONTEXT',
+              value: data.queryResult.intent.displayName,
+            })
+            await client.channels.continueInDialplan({ channelId: channel.id })
           }
         })
 
