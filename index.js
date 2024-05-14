@@ -96,9 +96,14 @@ async function main() {
             })
           }
 
-          // if (data.intent?.intent?.endInteraction) {
-          //   await client.channels.continueInDialplan({ channelId: channel.id })
-          // }
+          if (data.endIntraction) {
+            await client.channels.setChannelVar({
+              channelId: channel.id,
+              variable: 'INTENTCONTEXT',
+              value: 'EXIT',
+            })
+            await client.channels.continueInDialplan({ channelId: channel.id })
+          }
 
           if (
             data.endTransmission &&
