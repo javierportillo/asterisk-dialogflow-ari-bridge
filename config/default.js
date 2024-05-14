@@ -1,6 +1,6 @@
 module.exports = {
   ari: {
-    url: 'http://tele:8088',
+    url: 'http://asterisk:8088',
     username: 'rtpaudioserver',
     password: 'asterisk',
     appName: 'dialogflow',
