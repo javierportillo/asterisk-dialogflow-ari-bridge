@@ -108,9 +108,10 @@ async function main() {
           if (
             data.endTransmission &&
             (data.queryResult?.intent?.displayName === 'GOTOSUPPORT' ||
-              data.queryResult?.intent?.displayName === 'GOTOSALES')
+              data.queryResult?.intent?.displayName === 'GOTOSALES' ||
+              data.queryResult?.intent?.displayName === 'Requiere_asesor')
           ) {
-            log.info('GOTTA GO TO', data.queryResult.intent.displayName)
+            log.info('CLOSING STASIS, CONTINUE ON DIALPLAN')
             await client.channels.setChannelVar({
               channelId: channel.id,
               variable: 'INTENTCONTEXT',
